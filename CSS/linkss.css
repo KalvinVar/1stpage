@@ -1,0 +1,28 @@
+
+:root 
+{
+	--global-color-1: #2b79b8;
+}
+
+body 
+{
+	font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    margin-left: 10px;
+}
+
+
+main 
+{
+	clear: left;
+}
+main h1 
+{
+	font-size: 160%;
+	color: #2e42f3;
+}
+
+footer p 
+{
+	text-align: center;
+}

@@ -1,0 +1,83 @@
+/* css for tools grid image layout */
+		
+		/* header in main */
+		.mainheadder
+		{
+			width: 100%;
+			text-align: center;
+			height: 100%;
+			background-color: black;
+		}
+		.mainheadder > h2
+		{
+			color: white;
+
+		}
+		/* image grid settings */
+        .box 
+		{
+			margin: 0;
+			display: grid;
+			--mun-collm: 3;
+			--gap: 16px;
+			--row-hight: 300px;
+			gap: 16px;
+			box-sizing: border-box;
+			padding: var(--gap);
+			grid-template-columns: repeat(var(--mun-collm), 1fr);
+			grid-auto-rows: var(--row-hight) ;
+			height: 650px;
+        }
+		/* container of the image */
+		.gpu
+		{
+			background-size: cover;
+			background-attachment: fixed;
+			display: flex;
+			flex-direction:column;
+			align-items: center;
+			justify-content: center;
+
+			transition: all .1s ease-in;
+		}
+		/* image itself */
+		.gpu >img 
+		{
+			background-color: black;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			image-orientation: center;	
+			opacity: .85;
+		}
+		/* hover over image effect */
+		.gpu:hover
+		{
+			opacity: .7;
+			transform: scale(.98);
+		}
+		@font-face 
+		{
+  font-family: Font;
+  src: url(font/Oswald-VariableFont_wght.ttf);
+	}
+
+		.box > .gpu > h2
+		{
+			font-family: Font;
+			position:relative;
+			text-align: center;
+			top: -150px;
+			color: white;
+			width: 100%;
+			background-color: black;
+		}
+@media only screen and (max-width:800px){
+	.box 
+	{
+		grid-template-columns: 1fr;
+		--row-height: 100px;
+		height: auto;
+	}
+	
+}		
